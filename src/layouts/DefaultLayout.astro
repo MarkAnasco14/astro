@@ -28,6 +28,12 @@ let subtitle = 'Accessible Astro Dashboard'
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dashboard.accessible-astro.dev">
     <meta property="og:image" content="/social-preview-image.png">
+    
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Student Dashboard</title>
+      <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    
 
     <!-- page title -->
     <title>{title} - {subtitle}</title>
@@ -47,30 +53,30 @@ let subtitle = 'Accessible Astro Dashboard'
             <span class="sr-only">Dashboard</span>
           </a>
         </li>
-        <li class="menu-item">
+        <!-- <li class="menu-item">
           <a href="/products/">
             <Icon pack="majesticons" name="shopping-cart-line" /> 
             <span class="sr-only">Products</span>
           </a>
-        </li>
+        </li> -->
         <li class="menu-item">
           <a href="/users/">
             <Icon pack="majesticons" name="users-line" /> 
             <span class="sr-only">Users</span>
           </a>
         </li>
-        <li class="menu-item">
+        <!-- <li class="menu-item">
           <a href="/messages/">
             <Icon pack="majesticons" name="messages-line" /> 
             <span class="sr-only">Messages</span>
           </a>
-        </li>
-        <li class="menu-item">
+        </li> -->
+        <!-- <li class="menu-item">
           <a href="/media/">
             <Icon pack="majesticons" name="image-line" /> 
             <span class="sr-only">Media</span>
           </a>
-        </li>
+        </li> -->
       </Navigation>    
       <main id="main-content">
         <slot />
@@ -159,7 +165,7 @@ let subtitle = 'Accessible Astro Dashboard'
 
     &:hover {
       svg path {
-        fill: var(--primary-400);
+        // fill: var(--primary-400);
       }
     }
   }

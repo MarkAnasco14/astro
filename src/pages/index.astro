@@ -4,11 +4,11 @@ import DashboardWidget from '../components/DashboardWidget.astro';
 ---
 
 <DefaultLayout title="Dashboard">
-  <section>
+  <!-- <section>
     <h1>Welcome Astronaut 🧑‍🚀</h1><br>
     <p class="size-20">Build fast dashboards, faster (and accessible).</p>
-  </section>
-  <section class="margin-32">
+  </section> -->
+  <!-- <section class="margin-32">
     <div class="space-content">
       <div class="contents">
         <h2>Widgets</h2>
@@ -25,19 +25,58 @@ import DashboardWidget from '../components/DashboardWidget.astro';
           title="Images deleted"
           type="error"
         />
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
-        <div class="radius-large space-96" style="border: 4px dashed grey;"></div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <main class="container mx-auto p-4">
+    <select id="schoolyear" class="bg-white rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+      <option value="SY 2022 2023 1st Semester">SY 2022 2023 1st Semester</option>
+      <option value="SY 2022 2023 2nd Semester">SY 2022 2023 2nd Semester</option>
+      <option value="SY 2023 2024 1st Semester" selected>SY 2023 2024 1st Semester</option>
+      <option value="SY 2023 2024 2nd Semester">SY 2023 2024 2nd Semester</option>
+    </select>
+    
+    <select id="semester" class="bg-white rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ml-2">
+      <option value="1st Semester">1st Semester</option>
+      <option value="2nd Semester">2nd Semester</option>
+    </select>
+    
+    <select id="subject" class="bg-white rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ml-2">
+      <option value="IT311">IT311</option>
+      <option value="MATH 101">MATH 101</option>
+      </select>
+    
+    <table>
+      <div class="row">
+        <div class="button">STUDENTS</div>
+        <div class="button">GRADES</div>
+      </div>
+    </table>
+    
+  </main>
 </DefaultLayout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+</style>  
 
 <script>
   const date = new Date()
