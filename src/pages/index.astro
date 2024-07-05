@@ -29,29 +29,26 @@ import DashboardWidget from '../components/DashboardWidget.astro';
     </div>
   </section> -->
   <main class="container mx-auto p-4">
-    <select id="schoolyear" class="bg-white rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-      <option value="SY 2022 2023 1st Semester">SY 2022 2023 1st Semester</option>
-      <option value="SY 2022 2023 2nd Semester">SY 2022 2023 2nd Semester</option>
-      <option value="SY 2023 2024 1st Semester" selected>SY 2023 2024 1st Semester</option>
-      <option value="SY 2023 2024 2nd Semester">SY 2023 2024 2nd Semester</option>
-    </select>
-    
-    <select id="semester" class="bg-white rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ml-2">
-      <option value="1st Semester">1st Semester</option>
-      <option value="2nd Semester">2nd Semester</option>
-    </select>
-    
-    <select id="subject" class="bg-white rounded-lg border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ml-2">
-      <option value="IT311">IT311</option>
-      <option value="MATH 101">MATH 101</option>
-      </select>
-    
-    <table>
-      <div class="row">
-        <div class="button">STUDENTS</div>
-        <div class="button">GRADES</div>
+  </section>
+  <section class="margin-32">
+    <div class="space-content">
+      <div class="contents">
+        <h2>Users</h2>
+        <p id="current-time" class="size-12"></p>
       </div>
-    </table>
+      <div class="grid small-grid-1 medium-grid-2 large-grid-3 equal-height">
+        <DashboardWidget />
+        <DashboardWidget
+          number="+33"
+          title="add enrolled students"
+        />
+        <DashboardWidget
+          number="-120"
+          title="ambot yawa"
+          type="error"
+        />
+      </div>
+    </section>
     
   </main>
 </DefaultLayout>
